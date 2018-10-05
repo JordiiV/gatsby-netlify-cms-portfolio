@@ -28,7 +28,7 @@ export default class ProductPage extends React.Component {
                     <Link className="has-text-primary" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
+                    <span> <br /> </span>
                     <small>{post.frontmatter.date}</small>
                   </p>
                   <p>

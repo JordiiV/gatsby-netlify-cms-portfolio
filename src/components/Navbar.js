@@ -1,11 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-// import github from '../img/github-icon.svg'
 import rhino from '../img/rhino.svg'
-// import Twitter from '../img/twitter.svg'
-// import Linkedin from '../img/linkedin.svg'
 import jQuery from 'jquery'
-
+import './main.scss'
 export default class Navbar extends React.Component {
 
   crossBurguer = () => {
@@ -13,8 +10,10 @@ export default class Navbar extends React.Component {
   }
 
   render() {
+    let { pathname } = window.location;
+    console.log(pathname)
     return (
-      <nav className="navbar is-transparent is-fixed-top">
+      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%' }}>
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <figure className="image">
@@ -28,10 +27,10 @@ export default class Navbar extends React.Component {
           </div>
         </div>
           <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
-            <Link className="navbar-item" to="/about">
+            <Link className={pathname == '/about' ? 'navbar-item active': 'navbar-item'} to="/about">
               About
           </Link>
-            <Link className="navbar-item" to="/products">
+            <Link className={pathname == '/products' ? 'navbar-item active': 'navbar-item'} to="/products">
               Blog
           </Link>
           </div>

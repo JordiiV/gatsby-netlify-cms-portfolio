@@ -4,7 +4,6 @@
   
 }
 
-
 .menu-list a {
     padding: 0em 0.75em;
 }
@@ -14,3 +13,29 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+  .navbar{
+      background-color:#fafafa;
+  }
+
+ #navbarMenuHeroA{
+    background-color:white;
+    .active{
+       background-color:#d645b7ad;
+       color:white;
+       
+    }
+ }
+
+ @media screen and (min-width: 1088px){
+     .navbar a.navbar-item:hover{
+        background-color:#d65b45ad;
+        color:white;
+     }
+
+ }

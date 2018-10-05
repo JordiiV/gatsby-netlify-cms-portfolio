@@ -9,7 +9,7 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
             <section class="hero is-dark is-large">
-              <div class="hero-body" style={{ margin: '10% 0px 0px 0px' }}> 
+              <div class="hero-body" style={{ margin: '5% 0px 0px 0px' }}> 
                 <div class="container">
                   <h1 class="title">
                     Hi
