@@ -5,7 +5,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  exports.modifyWebpackConfig = ({ config, stage }) => {
+  exports.onCreateWebpackConfig = ({ config, stage }) => {
     if (stage === 'build-html') {
       config.loader('null', {
         test: /lazysizes/,
