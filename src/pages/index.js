@@ -8,13 +8,13 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-            <section class="hero is-dark is-large">
-              <div class="hero-body" style={{ margin: '5% 0px 0px 0px' }}> 
-                <div class="container">
-                  <h1 class="title">
+            <section className="hero is-dark is-large">
+              <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}> 
+                <div className="container">
+                  <h1 className="title">
                     Hi
                   </h1>
-                  <h1 class="title">
+                  <h1 className="title">
                    I'm the Mead Baron
                   </h1>
                 </div>

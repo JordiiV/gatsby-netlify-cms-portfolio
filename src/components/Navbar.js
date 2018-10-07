@@ -9,28 +9,10 @@ export default class Navbar extends React.Component {
     jQuery('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
   }
 
-  componentDidMount() {
-    // Requiring function causes error during builds
-    // as the code tries to reference window
-    const module = require("module") // Error
-
-    // Wrap the require in check for window
-    if (typeof window !== `undefined`) {
-      const module = require("module")
-    }
+  componentDidMount = () => {
+    const isBrowser = typeof window !== `undefined`
   }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    // Requiring function causes error during builds
-    // as the code tries to reference window
-    const module = require("module") // Error
-
-    // Wrap the require in check for window
-    if (typeof window !== `undefined`) {
-      const module = require("module")
-    }
-  }
-
+  
 
   render() {
     let { pathname } = window.location;
@@ -49,17 +31,17 @@ export default class Navbar extends React.Component {
             <span></span>
           </div>
         </div>
-        <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
-          <Link className={pathname == '/about' ? 'navbar-item active' : 'navbar-item'} to="/about">
-            About
+          <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
+            <Link className={pathname == '/about' ? 'navbar-item active': 'navbar-item'} to="/about">
+              About
           </Link>
-          <Link className={pathname == '/products' ? 'navbar-item active' : 'navbar-item'} to="/products">
-            Blog
+            <Link className={pathname == '/products' ? 'navbar-item active': 'navbar-item'} to="/products">
+              Blog
           </Link>
-        </div>
-
+          </div>
+        
       </nav>
-
+      
 
     )
   }
