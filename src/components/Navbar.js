@@ -8,17 +8,6 @@ export default class Navbar extends React.Component {
   crossBurguer = () => {
     jQuery('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
   }
-  
-  componentDidMount(){
-    const windowGlobal = typeof window !== 'undefined' && window
-
-  }
-
-  componentDidUpdate = (prevProps, prevState) => {
-    const windowGlobal = typeof window !== 'undefined' && window
-
-  }
-  
 
   render() {
     let { pathname } = window.location;

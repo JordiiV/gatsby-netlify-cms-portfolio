@@ -4,7 +4,22 @@ const { createFilePath } = require('gatsby-source-filesystem')
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
-
+  
+  exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
+    if (stage === "build-html") {
+      actions.setWebpackConfig({
+        module: {
+          rules: [
+            {
+              test: /bad-module/,
+              use: loaders.null(),
+            },
+          ],
+        },
+      })
+    }
+  }
+  
   return graphql(`
     {
       allMarkdownRemark(limit: 1000) {
