@@ -10,6 +10,8 @@ export default class Navbar extends React.Component {
   }
 
   render() {
+ 
+
     let { pathname } = window.location;
     console.log(pathname)
     return (
@@ -26,17 +28,17 @@ export default class Navbar extends React.Component {
             <span></span>
           </div>
         </div>
-          <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
-            <Link className={pathname == '/about' ? 'navbar-item active': 'navbar-item'} to="/about">
-              About
+        <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
+          <Link className={pathname == '/about' ? 'navbar-item active' : 'navbar-item'} to="/about">
+            About
           </Link>
-            <Link className={pathname == '/products' ? 'navbar-item active': 'navbar-item'} to="/products">
-              Blog
+          <Link className={pathname == '/products' ? 'navbar-item active' : 'navbar-item'} to="/products">
+            Blog
           </Link>
-          </div>
-        
+        </div>
+
       </nav>
-      
+
 
     )
   }
