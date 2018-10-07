@@ -9,14 +9,7 @@ export default class Navbar extends React.Component {
     jQuery('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
   }
 
-  componentDidMount = () => {
-    const isBrowser = typeof window !== `undefined`
-  }
-  
-
   render() {
-    let { pathname } = window.location;
-    console.log(pathname)
     return (
       <nav className="navbar is-fixed-top" style={{ marginBottom: '5%' }}>
         <div className="navbar-brand">
@@ -32,10 +25,10 @@ export default class Navbar extends React.Component {
           </div>
         </div>
           <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
-            <Link className={pathname == '/about' ? 'navbar-item active': 'navbar-item'} to="/about">
+            <Link className='navbar-item' activeClassName="active" exact to="/about">
               About
           </Link>
-            <Link className={pathname == '/products' ? 'navbar-item active': 'navbar-item'} to="/products">
+            <Link className='navbar-item' activeClassName="active" to="/products">
               Blog
           </Link>
           </div>
