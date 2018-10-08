@@ -2,14 +2,16 @@
 templateKey: about-page
 title: About me
 ---
-
-<div id="intro" class="toggle">
-Hi, my name is Jordi and i'm from Barcelona, Spain. This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing. Take a sit, something warm to drink and enjoy, because I like to write and this will be long. 
+<!-- <div class="columns">
+<div id="intro" class="column toggle columnToggle">
+This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
+Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
 </div>
+</div> -->
 
 <div class="columns">
 
-<div id="column1" class="toggle column">
+<div id="column1" class="toggle column columnToggle">
 
 <div id="technology" class="toggle">
 
@@ -43,7 +45,7 @@ The fact is that I always see they working in their gardens and enjoying it, and
 </div>
 </div>
 
-<div id="column2" class="toggle column">
+<div id="column2" class="toggle column columnToggle">
 
 <div id="archaeology" class="toggle">
 
@@ -75,6 +77,19 @@ I started to dive in the sea and pools before i learned to swim (obvious no? if 
 
 </div>
 
-<div class="columns">
+<!-- <div class="columns">
+<div id="intro" class="column is-hidden toggle columnToggle">
+This section will be similar to curriculum vitae, with intention to show the visitor my skills and job experiences.
+Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
+</div>
+</div> -->
+
+<div id="column3" class="toggle column is-hidden columnToggle">
+
+### CV
+
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 </div>
+
+

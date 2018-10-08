@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 
@@ -15,10 +16,16 @@ export default class ProductPage extends React.Component {
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Blog</h1>
-           
+
             </div>
+
+            <div className="section">
+              <Link className="has-text-primary is-pulled-right" to="/tags"><h5>Search by TAG</h5></Link>
+            </div>
+
             {posts
               .map(({ node: post }) => (
+
                 <div
                   className="content"
                   style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
@@ -40,7 +47,7 @@ export default class ProductPage extends React.Component {
                     </Link>
                   </p>
                 </div>
-              ))}            
+              ))}
           </div>
         </section>
       </Layout>

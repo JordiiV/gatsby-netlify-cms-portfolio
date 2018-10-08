@@ -1,4 +1,6 @@
 #switch-component {
+
+    margin:3%;
     .switch {
         position: relative;
         display: inline-block;
@@ -35,11 +37,11 @@
     }
 
     input:checked + .slider {
-        background-color: #6F80F1;
+        background-color: #e381ce;
     }
 
     input:focus + .slider {
-        box-shadow: 0 0 1px #6F80F1;
+        box-shadow: 0 0 1px #e381ce;
     }
 
     input:checked + .slider:before {

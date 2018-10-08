@@ -3,6 +3,13 @@
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
   
 }
+.margin3{
+    margin:1%;
+}
+
+.is-myself{
+    width: 50%;
+}
 
 .menu-list a {
     padding: 0em 0.75em;
@@ -34,8 +41,8 @@ body {
 
  @media screen and (min-width: 1088px){
      .navbar a.navbar-item:hover{
-        background-color:#d65b45ad;
-        color:white;
+        background-color:#faf601d2;
+        color:black;
      }
 
  }
