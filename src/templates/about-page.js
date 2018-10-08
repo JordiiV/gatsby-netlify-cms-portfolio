@@ -52,13 +52,36 @@ export class AboutPageTemplate extends React.Component {
               <div className="column is-mobile is-two-thirds-desktop">
                 <div className={"content is-medium"}>
                   <div id="intro" class="toggle">
-                    <p>My name Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
+                    <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
                     <br />
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
              </p>
                   </div>
-                  <div id="switch-component">
-                    {/* <p className="is-bold">Click me!</p> */}
+                  <div className="columns is-mobile is-centered" style={{marginTop:"8%"}}>
+                    <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? {borderBottom:" 1px solid #e381ce", color:"black"}: {}}>
+                      <p className="is-bold">INFORMAL</p>
+                    </div>
+                    <div className="column has-text-centered">
+                      <div id="switch-component">
+
+                        <label className="switch">
+                          <input
+                            type="checkbox"
+                            className="checkbox"
+                            onChange={this.toggleImgVal}
+                            onClick={(e) => this.setState({ imgVal: e.target.checked ? 1 : 0 })}
+                            checked={this.state.imgVal}
+                          />
+                          <span className="slider round" />
+                        </label>
+                      </div>
+                    </div>
+                    <div id="formal" id="informal"  className="column has-text-centered is-4" style={this.state.imgVal == 1 ? {borderBottom:" 1px solid #1f3bd8", color:"black"}: {}}>
+                      <p className="is-bold">FORMAL</p>
+                    </div>
+                  </div>
+
+                  {/* <div id="switch-component">
 
                     <label className="switch">
                       <input
@@ -70,37 +93,39 @@ export class AboutPageTemplate extends React.Component {
                       />
                       <span className="slider round" />
                     </label>
-                  </div>
+                  </div> */}
+                 
                 </div>
               </div>
-              <div className="column">
-                <div id='imgVal1' className='is-block columnToggle'>
-                  <figure class="image is-2by4">
-                    <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" />
-                  </figure>
-                </div>
-                <div id='imgVal2' className='is-hidden columnToggle'>
-                  <figure class="image is-2by4">
-                    <img className="is-rounded" src='https://i.gyazo.com/f53ce02129039f126eece15dd8997086.png' />
-                  </figure>
-                </div>
+            <div className="column">
+              <div id='imgVal1' className='is-block columnToggle'>
+                <figure class="image is-2by4">
+                  <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" />
+                </figure>
               </div>
-
+              <div id='imgVal2' className='is-hidden columnToggle'>
+                <figure class="image is-2by4">
+                  <img className="is-rounded" src='https://i.gyazo.com/f53ce02129039f126eece15dd8997086.png' />
+                </figure>
+              </div>
+            </div>
             </div>
 
+          </div>
 
 
-          </div>
-          <div id="intro" class="toggle columnToggle">
-            This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
-            Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
-          </div>
-          <div id="intro" class="is-hidden toggle columnToggle">
-            This section will be similar to curriculum vitae, with intention to show the visitor my skills, competencies and job experiences.
-            Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
-          </div>
-          <PageContent className="content" content={content} />
+
         </div>
+        <div id="intro" class="toggle columnToggle">
+          This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
+          Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
+          </div>
+        <div id="intro" class="is-hidden toggle columnToggle">
+          This section will be similar to curriculum vitae, with intention to show the visitor my skills, competencies and job experiences.
+          Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
+          </div>
+        <PageContent className="content" content={content} />
+      
       </section >
     )
   }
