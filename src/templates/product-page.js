@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import { kebabCase } from 'lodash'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
+import TagsPage from '../pages/tags/index'
 
 export default class ProductPage extends React.Component {
 
   render() {
     const { data } = this.props
-    const { edges: posts } = data.allMarkdownRemark
-
+    const { edges: posts, group : group } = data.allMarkdownRemark
+    console.log(group)
     return (
       <Layout>
         <section className="section">
@@ -19,8 +20,23 @@ export default class ProductPage extends React.Component {
 
             </div>
 
-            <div className="section">
-              <Link className="has-text-primary is-pulled-right" to="/tags"><h5>Search by TAG</h5></Link>
+            <div className="level is-mobile">
+              {/* <Link className="has-text-primary is-pulled-right" to="/tags"><h5>Search by TAG</h5></Link> */}
+            {/* <TagsPage data={data}/> */}
+            <ul className="level-item">
+            <p><Link className="has-text-primary is-pulled-right" to="/tags"><h5>TAGs:</h5></Link></p>
+              {group.slice(0, 4).map(tag => (
+                <li key={tag.fieldValue}>
+                {group.length < 10 ?
+                  <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
+                    {tag.fieldValue} ({tag.totalCount})
+                  </Link>
+                  :
+                  null
+                }
+                </li>
+              ))}
+            </ul>
             </div>
 
             {posts
@@ -59,16 +75,26 @@ ProductPage.propTypes = {
   data: PropTypes.shape({
     allMarkdownRemark: PropTypes.shape({
       edges: PropTypes.array,
+      group: PropTypes.array,
     }),
   }),
 }
 
 export const pageQuery = graphql`
   query ProductPage {
-    allMarkdownRemark(
+    site {
+      siteMetadata {
+        title
+      }
+    }
+    allMarkdownRemark(      
       sort: { order: DESC, fields: [frontmatter___date] },
       filter: { frontmatter: { templateKey: { eq: "blog-post" } }}
     ) {
+      group(field: frontmatter___tags) {
+        fieldValue
+        totalCount
+      }
       edges {
         node {
           excerpt(pruneLength: 400)

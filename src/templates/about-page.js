@@ -49,7 +49,7 @@ export class AboutPageTemplate extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">About</h1>
             <div className="columns">
-              <div className="column is-mobile is-two-thirds-desktop">
+              <div className="column is-mobile is-three-quarters-desktop">
                 <div className={"content is-medium"}>
                   <div id="intro" class="toggle">
                     <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
@@ -57,9 +57,9 @@ export class AboutPageTemplate extends React.Component {
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
              </p>
                   </div>
-                  <div className="columns is-mobile is-centered" style={{marginTop:"8%"}}>
+                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"3%"}}>
                     <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? {borderBottom:" 1px solid #e381ce", color:"black"}: {}}>
-                      <p className="is-bold">INFORMAL</p>
+                      <p className="is-bold">PERSONAL</p>
                     </div>
                     <div className="column has-text-centered">
                       <div id="switch-component">
@@ -77,24 +77,9 @@ export class AboutPageTemplate extends React.Component {
                       </div>
                     </div>
                     <div id="formal" id="informal"  className="column has-text-centered is-4" style={this.state.imgVal == 1 ? {borderBottom:" 1px solid #1f3bd8", color:"black"}: {}}>
-                      <p className="is-bold">FORMAL</p>
+                      <p className="is-bold">BUSSINES</p>
                     </div>
-                  </div>
-
-                  {/* <div id="switch-component">
-
-                    <label className="switch">
-                      <input
-                        type="checkbox"
-                        className="checkbox"
-                        onChange={this.toggleImgVal}
-                        onClick={(e) => this.setState({ imgVal: e.target.checked ? 1 : 0 })}
-                        checked={this.state.imgVal}
-                      />
-                      <span className="slider round" />
-                    </label>
-                  </div> */}
-                 
+                  </div>     
                 </div>
               </div>
             <div className="column">
@@ -110,13 +95,9 @@ export class AboutPageTemplate extends React.Component {
               </div>
             </div>
             </div>
-
           </div>
-
-
-
-        </div>
-        <div id="intro" class="toggle columnToggle">
+               
+        <div id="intro" class="toggle columnToggle" style={{marginLeft:'1.5%'}}>
           This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
           Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
           </div>
@@ -125,6 +106,7 @@ export class AboutPageTemplate extends React.Component {
           Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
           </div>
         <PageContent className="content" content={content} />
+          </div>
       
       </section >
     )

@@ -8,8 +8,7 @@ export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="columns">
-          <div className="column">
+       
             <section className="hero is-fullheight is-dark is-large">
               <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
                 <div className="container">
@@ -22,12 +21,9 @@ export default class IndexPage extends React.Component {
                 </div>
               </div>
             </section>
-          </div>
-        </div>
-        <div className="section">
+        <section className="section">
+       
         <h1 className="has-text-weight-bold is-size-2">My projects</h1>
-        </div>
-
         <div className='columns is-variable is-2 is-multiline'>
         <div className='column margin3'>
           <a>
@@ -57,7 +53,8 @@ export default class IndexPage extends React.Component {
             </figure>
           </a>
           </div>
-        </div>
+          </div>
+      </section>
       </Layout>
     )
   }

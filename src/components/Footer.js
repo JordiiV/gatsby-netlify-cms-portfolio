@@ -6,7 +6,7 @@ import './all.sass'
 
 const Footer = ({ children }) => (
   <div>
-    <footer class="footer" style={{backgroundColor:'rgba(74, 74, 74, 0.61)'}}>
+    <footer class="footer" style={{backgroundColor:'rgba(74, 74, 74, 0.61)', padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
   <div className="content has-text-centered">
     <p style={{color:'white'}}>
       Here you can find me!
