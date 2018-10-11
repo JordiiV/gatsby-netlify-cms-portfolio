@@ -6,13 +6,13 @@ import './all.sass'
 
 const Footer = ({ children }) => (
   <div>
-    <footer class="footer header-image" style={{backgroundColor:'#ffffff00', padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
-  <div className="content has-text-centered">
+    <footer class="footer header-image-mobile" style={{backgroundColor:'#f1f1f1', padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
+  <div className="content has-text-centered container-footer">
     <p style={{color:'black'}}>
       Here you can find me!
     </p>
     <div className="columns is-mobile is-centered">
-    <div className="column has-text-centered is-2">
+    <div className="column has-text-centered is-one-fifth-desktop">
     <a
             className=""
             href="https://github.com/JordiiV"
@@ -24,7 +24,7 @@ const Footer = ({ children }) => (
             </span>
           </a>
     </div>
-    <div className="column has-text-centered  is-2">
+    <div className="column has-text-centered is-one-fifth-desktop">
     
           <a
             className=""
@@ -37,7 +37,7 @@ const Footer = ({ children }) => (
             </span>
           </a>
     </div>
-    <div className="column has-text-centered  is-2">
+    <div className="column has-text-centered  is-one-fifth-desktop">
     
           <a
             className=""

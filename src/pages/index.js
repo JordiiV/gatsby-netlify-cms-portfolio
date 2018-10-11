@@ -3,19 +3,20 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import '../components/main.scss'
+import '../components/all.sass'
 
 export default class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
        
-            <section className="hero is-fullheight is-large header-image">
-              <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
-                <div className="container">
-                  <h1 className="title" style={{color:'black'}}>
+            <section className={"hero is-fullheight is-large header-image-mobile is-dark"}>
+              <div className="hero-body" style={{ margin: '5% 0px 0px 0px'}}>
+                <div className="container container-mobile" style={{ marginTop:"-8%", padding:"11% 13% 10% 5%" }}>
+                  <h1 className="title" style={{color:'white', fontWeight:"700", fontSize:"3rem"}}>
                     Hi
                   </h1>
-                  <h1 className="title" style={{color:'black'}}>
+                  <h1 className="title" style={{color:'white', fontWeight:"700"}}>
                     I'm the Mead Baron
                   </h1>
                 </div>

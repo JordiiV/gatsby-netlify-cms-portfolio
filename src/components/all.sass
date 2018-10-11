@@ -1,11 +1,9 @@
+@import "~bulma/bulma.sass";
 @import "~bulma/sass/utilities/initial-variables"
+@import "~bulma/sass/utilities/mixins"
+
 
 // Config vars
-$kaldi-red: #FD461E
-$kaldi-red-invert: #fff
-
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
 
 .toggle
   margin: 1%
@@ -45,5 +43,25 @@ $primary-invert: $kaldi-red-invert
 
 .margin-top-0
   margin-top: 0 !important
+
+.is-one-fifth-desktop
+  width: 6% !important
+
++mobile
+  .header-image-mobile
+    background-image: url("https://media1.giphy.com/media/3ohhwESi9BLJqW7J1C/giphy.gif?cid=3640f6095bbf3da06169657a51f9eb8c");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  
+  .container-mobile
+    background-color: rgb(81, 226, 226)
+  .container-footer
+    background-color: white
+    
++desktop  
+  .header-image-mobile
+    
 
 @import "~bulma"

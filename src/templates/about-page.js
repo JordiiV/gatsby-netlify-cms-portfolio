@@ -44,7 +44,7 @@ export class AboutPageTemplate extends React.Component {
 
     console.log(this.state.imgVal)
     return (
-      <section className="section">
+      <section className="section" style={{paddingTop:"5rem"}}>
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">About</h1>

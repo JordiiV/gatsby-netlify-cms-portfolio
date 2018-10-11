@@ -13,7 +13,7 @@ export default class ProductPage extends React.Component {
     console.log(group)
     return (
       <Layout>
-        <section className="section">
+        <section className="section" style={{paddingTop:"5rem"}}>
           <div className="container">
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Blog</h1>

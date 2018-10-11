@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%' }}>
+      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1" }}>
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <figure className="image">
@@ -24,7 +24,7 @@ export default class Navbar extends React.Component {
             <span></span>
           </div>
         </div>
-          <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor: '255, 255, 255, 0.233' }}>
+          <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor:"#f1f1f1" }}>
             <Link className='navbar-item' activeClassName="active" exact to="/about">
               About
           </Link>
