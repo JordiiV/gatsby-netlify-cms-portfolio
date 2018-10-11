@@ -57,9 +57,10 @@ export class AboutPageTemplate extends React.Component {
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
              </p>
                   </div>
-                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"1%"}}>
+                  </div>
+                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"1%", marginRight: '2%'}}>
                     <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? {borderBottom:" 1px solid #e381ce", color:"black"}: {}}>
-                      <p className="is-bold">PERSONAL</p>
+                      <p className="is-bold" style={{fontSize:"1.2rem"}}>PERSONAL</p>
                     </div>
                     <div className="column has-text-centered">
                       <div id="switch-component">
@@ -77,10 +78,10 @@ export class AboutPageTemplate extends React.Component {
                       </div>
                     </div>
                     <div id="formal" id="informal"  className="column has-text-centered is-4" style={this.state.imgVal == 1 ? {borderBottom:" 1px solid #1f3bd8", color:"black"}: {}}>
-                      <p className="is-bold">BUSSINESS</p>
+                      <p className="is-bold" style={{fontSize:"1.2rem"}}>BUSSINESS</p>
                     </div>
                   </div>     
-                </div>
+                
               </div>
             <div className="column">
               <div id='imgVal1' className='is-block columnToggle'>
