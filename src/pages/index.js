@@ -9,13 +9,13 @@ export default class IndexPage extends React.Component {
     return (
       <Layout>
        
-            <section className="hero is-fullheight is-dark is-large">
+            <section className="hero is-fullheight is-large header-image">
               <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
                 <div className="container">
-                  <h1 className="title">
+                  <h1 className="title" style={{color:'black'}}>
                     Hi
                   </h1>
-                  <h1 className="title">
+                  <h1 className="title" style={{color:'black'}}>
                     I'm the Mead Baron
                   </h1>
                 </div>

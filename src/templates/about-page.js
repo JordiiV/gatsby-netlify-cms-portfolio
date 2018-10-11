@@ -50,14 +50,14 @@ export class AboutPageTemplate extends React.Component {
             <h1 className="has-text-weight-bold is-size-2">About</h1>
             <div className="columns">
               <div className="column is-mobile is-three-quarters-desktop">
-                <div className={"content is-medium"}>
+                <div className={"content is-large"}>
                   <div id="intro" class="toggle">
                     <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
                     <br />
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
              </p>
                   </div>
-                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"3%"}}>
+                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"1%"}}>
                     <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? {borderBottom:" 1px solid #e381ce", color:"black"}: {}}>
                       <p className="is-bold">PERSONAL</p>
                     </div>
@@ -77,7 +77,7 @@ export class AboutPageTemplate extends React.Component {
                       </div>
                     </div>
                     <div id="formal" id="informal"  className="column has-text-centered is-4" style={this.state.imgVal == 1 ? {borderBottom:" 1px solid #1f3bd8", color:"black"}: {}}>
-                      <p className="is-bold">BUSSINES</p>
+                      <p className="is-bold">BUSSINESS</p>
                     </div>
                   </div>     
                 </div>
@@ -97,15 +97,15 @@ export class AboutPageTemplate extends React.Component {
             </div>
           </div>
                
-        <div id="intro" class="toggle columnToggle" style={{marginLeft:'1.5%'}}>
+        <div id="intro" class="toggle columnToggle content is-medium" style={{marginLeft:'1.5%'}}>
           This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
           Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
           </div>
-        <div id="intro" class="is-hidden toggle columnToggle">
+        <div id="intro" class="is-hidden toggle columnToggle content is-medium">
           This section will be similar to curriculum vitae, with intention to show the visitor my skills, competencies and job experiences.
           Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
           </div>
-        <PageContent className="content" content={content} />
+        <PageContent className="content is-medium" content={content} />
           </div>
       
       </section >

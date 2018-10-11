@@ -6,9 +6,9 @@ import './all.sass'
 
 const Footer = ({ children }) => (
   <div>
-    <footer class="footer" style={{backgroundColor:'rgba(74, 74, 74, 0.61)', padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
+    <footer class="footer header-image" style={{backgroundColor:'#ffffff00', padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
   <div className="content has-text-centered">
-    <p style={{color:'white'}}>
+    <p style={{color:'black'}}>
       Here you can find me!
     </p>
     <div className="columns is-mobile is-centered">

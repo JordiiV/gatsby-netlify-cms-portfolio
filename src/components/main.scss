@@ -3,6 +3,16 @@
     animation: fadeEffect 1s; /* Fading effect takes 1 second */
   
 }
+
+.header-image{
+    background-image: url("https://media1.giphy.com/media/3ohhwESi9BLJqW7J1C/giphy.gif?cid=3640f6095bbf3da06169657a51f9eb8c");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #999;
+}
+// https://media.giphy.com/media/ymiKd7838laww/200.gif
 .margin3{
     margin:1%;
 }
@@ -33,7 +43,7 @@ body {
  #navbarMenuHeroA{
     background-color:white;
     .active{
-       background-color:#d645b7ad;
+       background-color:#ff8aff;
        color:white;
        
     }
@@ -41,7 +51,7 @@ body {
 
  @media screen and (min-width: 1088px){
      .navbar a.navbar-item:hover{
-        background-color:#faf601d2;
+        background-color:#7dffff;
         color:black;
      }
 
