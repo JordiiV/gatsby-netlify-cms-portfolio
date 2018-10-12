@@ -14,7 +14,7 @@ export default class ProductPage extends React.Component {
     return (
       <Layout>
         <section className="section" style={{paddingTop:"5rem"}}>
-          <div className="container">
+          <div className="container" style={{ backgroundColor:"white", padding:'5%'}}>
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Blog</h1>
 
@@ -44,7 +44,7 @@ export default class ProductPage extends React.Component {
 
                 <div
                   className="content"
-                  style={{ border: '1px solid #eaecee', padding: '2em 4em' }}
+                  style={{ border: '1px solid rgb(82, 223, 235)', padding: '2em 4em' }}
                   key={post.id}
                 >
                   <p>
