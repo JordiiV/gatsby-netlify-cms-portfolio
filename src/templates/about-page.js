@@ -90,11 +90,11 @@ export class AboutPageTemplate extends React.Component {
                   </div>
                 </div>
 
-                  <div id="intro" class="toggle is-hidden-mobile columnToggle content is-medium" style={{ marginLeft: '1.5%' }}>
+                  <div id="intro" class="toggle column is-hidden-mobile columnToggle content is-medium" style={{ marginLeft: '1.5%' }}>
                     This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
                     Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
                   </div>
-                  <div id="intro" class="is-hidden is-hidden-mobile toggle columnToggle content is-medium">
+                  <div id="intro" class="is-hidden column is-hidden-mobile toggle columnToggle content is-medium">
                     This section will be similar to curriculum vitae, with intention to show the visitor my skills, competencies and job experiences.
                     Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
                    </div>

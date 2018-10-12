@@ -6,10 +6,10 @@ import Navbar from '../components/Navbar'
 import './all.sass'
 
 const TemplateWrapper = ({ children }) => (
-  <div className="header-image-mobile header-image-desktop changeB">
+  <div>
     <Helmet title="Portfolio" />
     <Navbar />
-    <div>{children}</div>
+    <div className="header-image-mobile header-image-desktop changeB">{children}</div>
     <Footer />
   </div>
 )
