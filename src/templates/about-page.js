@@ -49,7 +49,7 @@ export class AboutPageTemplate extends React.Component {
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">About</h1>
             <div className="columns">
-              <div className="column is-mobile is-three-quarters-desktop">
+              <div className="column is-mobile is-full-desktop">
                 <div className={"content is-large"}>
                   <div id="intro" class="toggle">
                     <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
@@ -58,7 +58,7 @@ export class AboutPageTemplate extends React.Component {
              </p>
                   </div>
                   </div>
-                  <div className="columns is-mobile is-centered" style={{marginTop:"8%", marginLeft:"1%", marginRight: '2%'}}>
+                  <div className="columns is-mobile is-centered" style={{marginTop:"5%", marginBottom:"4%", marginLeft:"1%", marginRight: '2%'}}>
                     <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? {borderBottom:" 1px solid #e381ce", color:"black"}: {}}>
                       <p className="is-bold" style={{fontSize:"1.2rem"}}>PERSONAL</p>
                     </div>
@@ -83,7 +83,7 @@ export class AboutPageTemplate extends React.Component {
                   </div>     
                 
               </div>
-            <div className="column">
+            <div className="column is-hidden-desktop">
               <div id='imgVal1' className='is-block columnToggle'>
                 <figure class="image is-2by4">
                   <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" />

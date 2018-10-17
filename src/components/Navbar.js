@@ -11,11 +11,14 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1" }}>
+      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1", height:"7%"}}>
+
+
+     <div className="container">
         <div className="navbar-brand">
           <Link to="/" className="navbar-item">
             <figure className="image">
-              <img src={rhino} alt="Rhino" style={{ width: '45px' }} />
+              <img src={rhino} alt="Rhino" style={{ width: '35px', height:"100%", maxHeight:"2.75rem" }} />
             </figure>
           </Link>
           <div class="navbar-burger burger" onClick={this.crossBurguer} data-target="navbarMenuHeroA">
@@ -24,7 +27,7 @@ export default class Navbar extends React.Component {
             <span></span>
           </div>
         </div>
-          <div className="navbar-menu" id="navbarMenuHeroA" style={{ backgroundColor:"#f1f1f1" }}>
+          <div className="navbar-menu navbar-end" id="navbarMenuHeroA" style={{ backgroundColor:"#f1f1f1" }}>
             <Link className='navbar-item' activeClassName="active" exact to="/about">
               About
           </Link>
@@ -32,7 +35,7 @@ export default class Navbar extends React.Component {
               Blog
           </Link>
           </div>
-        
+          </div>
       </nav>
       
 
