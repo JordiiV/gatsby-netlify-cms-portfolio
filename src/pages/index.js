@@ -12,7 +12,7 @@ export default class IndexPage extends React.Component {
        
             <section className={"hero is-fullheight is-large is-hidden-desktop header-image-mobile is-dark"}>
               <div className="hero-body" style={{ margin: '5% 0px 0px 0px'}}>
-                <div className="container container-mobile" style={{ marginTop:"-8%", padding:"11% 13% 10% 5%" }}>
+                <div className="container container-mobile" style={{ marginTop:"-8%", padding:"11% 13% 10% 5%", backgroundColor:"#02eaea"}}>
                   <h1 className="title" style={{color:'white', fontWeight:"700", fontSize:"3rem"}}>
                     Hi
                   </h1>

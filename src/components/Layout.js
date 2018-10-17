@@ -9,7 +9,7 @@ const TemplateWrapper = ({ children }) => (
   <div>
     <Helmet title="Portfolio" />
     <Navbar />
-    <div>{children}</div>
+    <div className="">{children}</div>
     <Footer />
   </div>
 )
