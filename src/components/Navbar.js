@@ -11,7 +11,7 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1", height:"7%"}}>
+      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1", height:"6%"}}>
 
 
      <div className="container">

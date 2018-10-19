@@ -44,7 +44,7 @@ export class AboutPageTemplate extends React.Component {
 
     console.log(this.state.imgVal)
     return (
-      <section className="section" style={{ paddingTop: "5rem" }}>
+      <section className="section" style={{ paddingTop: "6rem" }}>
         <div className="container">
           <div className="content">
             <h1 className="has-text-weight-bold is-size-2">About</h1>
@@ -52,20 +52,20 @@ export class AboutPageTemplate extends React.Component {
               <div className="column is-mobile is-full-desktop">
                 <div className={"content is-large"}>
                   <div id="intro" class="toggle">
-                    <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal facete</span> continue reading.
+                    <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> continue reading.
                     <br />
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
              </p>
                   </div>
                 </div>
-                <div className="columns is-mobile is-centered is-hidden-mobile" style={{ marginTop: "5%", marginBottom: "4%", marginLeft: "1%", marginRight: '2%' }}>
+                <div className="columns is-mobile is-centered is-hidden-mobile is-hidden-tablet-only" style={{ marginTop: "5%", marginBottom: "4%", marginLeft: "1%", marginRight: '2%' }}>
                   <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? { borderBottom: " 1px solid #e381ce", color: "black" } : {}}>
                     <figure class="image is-2by4">
                       <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" style={{paddingTop:"5.5%"}} />
                     </figure>
                   </div>
                   <div className="column has-text-centered">
-                    <div id="switch-component">
+                    <div id="switch-component" style={{margin:"45%"}}>
 
                       <label className="switch">
                         <input

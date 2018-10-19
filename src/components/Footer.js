@@ -6,8 +6,8 @@ import './all.sass'
 
 const Footer = ({ children }) => (
   <div>
-    <footer class="header-image-mobile" style={{ padding:'3rem 1.5rem 3rem', marginTop:'3%'}}>
-  <div className="content has-text-centered container-footer" style={{backgroundColor: "white"}}>
+    <footer class="header-image-mobile" style={{ padding:'3rem 1.5rem 3rem', marginTop:'3%', backgroundColor:"#f1f1f1"}}>
+  <div className="content has-text-centered container-footer">
     <p style={{color:'black'}}>
       Here you can find me!
     </p>

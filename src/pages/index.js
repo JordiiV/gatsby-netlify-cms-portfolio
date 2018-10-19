@@ -22,7 +22,7 @@ export default class IndexPage extends React.Component {
                 </div>
               </div>
             </section>
-            <section className={"hero is-fullheight is-large is-hidden-mobile is-dark"}>
+            <section className={"hero is-fullheight is-large is-hidden-tablet-only is-hidden-mobile is-dark"}>
               <div className="hero-body" style={{ margin: '5% 0px 0px 0px'}}>
                 <div className="container container-mobile" style={{ marginTop:"-8%", padding:"11% 13% 10% 5%" }}>
                   <h1 className="title" style={{color:'white', fontWeight:"700", fontSize:"3rem"}}>
