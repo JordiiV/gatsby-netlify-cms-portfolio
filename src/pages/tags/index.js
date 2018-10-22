@@ -9,7 +9,7 @@ const TagsPage = ({
 }) => (
   <Layout>
     <section className="section header-image-mobile header-image-desktop changeB">
-      <Helmet title={`Tags | ${title}`} />
+      <Helmet title={`Tags | Portfolio`} />
       <div className="container content">
         <div className="columns">
           <div

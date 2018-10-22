@@ -86,10 +86,12 @@ Take a sit, something warm to drink and enjoy, because I like to write and this 
 
 <div id="column3" class="toggle column is-hidden columnToggle">
 
-### CV
+### Resume
 
-"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+Archaeologist and Front-end developer, also league of legends caster in my free time. Actually I'm working as Junior developer in a multinational tech company, specially learning and working with React, Redux and Bootstrap. I'm also interested in mobile apps developing and specially in videogame developing and level design.I expect to develop myself as a professional in this field, and continue developing my competencies and skills the better I can.
+
 
 </div>
+
 
 

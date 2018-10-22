@@ -8,6 +8,7 @@ import Content, { HTMLContent } from '../components/Content'
 import '../components/switch/switch';
 
 
+
 export class AboutPageTemplate extends React.Component {
 
   static propTypes = {
@@ -20,10 +21,13 @@ export class AboutPageTemplate extends React.Component {
     imgVal: 1 ? 0 : 1
   }
 
-  toggleClass = (e) => {
 
-    jQuery("#" + e.target.id).toggleClass('is-hidden');
+  showModal =() => {    
+      jQuery("#showModal").addClass("is-active"); 
+  }     
 
+  hideModal =() => {      
+      jQuery(".modal").removeClass("is-active");
   }
 
   toggleImgVal = (e) => {
@@ -51,7 +55,7 @@ export class AboutPageTemplate extends React.Component {
             <div className="columns">
               <div className="column is-mobile is-full-desktop">
                 <div className={"content is-large"}>
-                  <div id="intro" class="toggle">
+                  <div id="intro" class="">
                     <p>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> continue reading.
                     <br />
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
