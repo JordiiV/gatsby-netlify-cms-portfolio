@@ -6,6 +6,7 @@ import AwesomeSlider from 'react-awesome-slider';
 import '../components/main.scss'
 import AwsSliderStyles from '../components/slider/styles.scss'
 import '../components/all.sass'
+import '../components/main.scss'
 
 export default class IndexPage extends React.Component {
   render() {
@@ -24,7 +25,7 @@ export default class IndexPage extends React.Component {
             </div>
           </div>
         </section>
-        <section className={"hero is-fullheight is-large is-hidden-mobile is-dark"}>
+        <section className={"hero is-fullheight hero-foo is-large is-hidden-mobile is-dark"}>
           <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
             <div className="container container-mobile" style={{ marginTop: "-8%", padding: "11% 13% 10% 5%" }}>
               <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "3rem" }}>
@@ -55,39 +56,6 @@ export default class IndexPage extends React.Component {
           </AwesomeSlider>
           </div>
         </div>
-        {/* <section className="section">
-          <h1 className="has-text-weight-bold is-size-2">My projects</h1>
-          <div className='columns is-variable is-2 is-multiline'>
-            <div className='column margin3'>
-              <a>
-                <figure class="image is-square">
-                  <img src="https://bulma.io/images/placeholders/256x256.png" />
-                </figure>
-              </a>
-            </div>
-            <div className='column margin3'>
-              <a>
-                <figure class="image is-square">
-                  <img src="https://bulma.io/images/placeholders/256x256.png" />
-                </figure>
-              </a>
-            </div>
-            <div className='column margin3'>
-              <a>
-                <figure class="image is-square">
-                  <img src="https://bulma.io/images/placeholders/256x256.png" />
-                </figure>
-              </a>
-            </div>
-            <div className='column margin3'>
-              <a>
-                <figure class="image is-square">
-                  <img src="https://bulma.io/images/placeholders/256x256.png" />
-                </figure>
-              </a>
-            </div>
-          </div>
-        </section> */}
       </Layout>
     )
   }
