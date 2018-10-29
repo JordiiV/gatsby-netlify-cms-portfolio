@@ -98,4 +98,51 @@ body {
 
  }
 
- 
+ //Selector
+
+ @import url(https://fonts.googleapis.com/css?family=VT323);
+
+body{
+  font-family: 'VT323';
+//   text-align:center;
+//   background:#111 url(https://subtlepatterns.com/patterns/dirty_old_shirt.png)
+}
+
+
+h1{
+  color:#fff;
+  font-size:56px;
+  text-shadow:2px 2px 0 #08c;
+  font-weight:normal
+}
+
+a{
+	font-size:24px;
+}
+
+p{
+	font-size:20px;
+}
+.t1{
+	padding-top:100%;
+	background-image:url(https://lh6.googleusercontent.com/pzA0IiYe__W_CDgannCbIRhJLFfPYIvZtNhdgO1zbXuSqZH6_T8WtWzpjJSZn7-zi-UoghCpq-lUd6_fXnr5Gyxv-UhehcYVi4srSjXAKTif1C4Ds7tNZFof5MFXjOGEEjoUCCc);
+  }
+
+.t2{
+	padding-top:100%;
+	background-image:url(https://4.bp.blogspot.com/-Sc9_SmZidP0/Wggn-8zugII/AAAAAAAMwXI/3CeoqAORILk_wFhgpxdkx7mR5PS9WL6GQCLcBGAs/s1600/AW620385_08.gif)
+  }
+
+.t1:hover, .t1.active{
+	background-image:url(https://vignette.wikia.nocookie.net/game-concepts-and-ideas/images/4/4b/77307-playing-videogame-gif-Nh7l_zps4ff57164.gif/revision/latest?cb=20150829210220);
+  }
+  .t1:hover::before, .t1.active::before{
+	 background: url(http://i62.tinypic.com/mmbh1x.jpg) 0 0 no-repeat;
+  }
+  .t2:hover, .t2.active{
+	background-image:url(https://2.bp.blogspot.com/-VCfEGAG4t-o/Wggn8L5RklI/AAAAAAAMwWk/bPuYzYlLjdgzffsbCUV5Gc8PLtkRUG8JQCLcBGAs/s1600/AW620385_00.gif);
+	background-position: center;
+  }
+  .t2:hover::before, .t2.active::before{
+	 background: url(https://2.bp.blogspot.com/-VCfEGAG4t-o/Wggn8L5RklI/AAAAAAAMwWk/bPuYzYlLjdgzffsbCUV5Gc8PLtkRUG8JQCLcBGAs/s1600/AW620385_00.gif) -100px 0px no-repeat;
+  }

@@ -6,7 +6,7 @@ import Layout from '../components/Layout'
 import MenuAbout from '../components/MenuAbout'
 import Content, { HTMLContent } from '../components/Content'
 import '../components/switch/switch';
-
+import '../components/main.scss'
 
 
 export class AboutPageTemplate extends React.Component {
@@ -22,12 +22,12 @@ export class AboutPageTemplate extends React.Component {
   }
 
 
-  showModal =() => {    
-      jQuery("#showModal").addClass("is-active"); 
-  }     
+  showModal = () => {
+    jQuery("#showModal").addClass("is-active");
+  }
 
-  hideModal =() => {      
-      jQuery(".modal").removeClass("is-active");
+  hideModal = () => {
+    jQuery(".modal").removeClass("is-active");
   }
 
   toggleImgVal = (e) => {
@@ -35,9 +35,14 @@ export class AboutPageTemplate extends React.Component {
     if (imgVal === 1) {
       //Show elegant image
       jQuery(".columnToggle").toggleClass('is-hidden');
+      jQuery(".t1").toggleClass('active');
+      jQuery(".t2").toggleClass('active');
     } else {
       //Show weird image
       jQuery(".columnToggle").toggleClass('is-hidden');
+      jQuery(".t2").toggleClass('active');
+      jQuery(".t1").toggleClass('active');
+
     }
   }
 
@@ -61,19 +66,22 @@ export class AboutPageTemplate extends React.Component {
                       If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
                     </p>
                     <p className="is-hidden-mobile">Otherwise, If you just want my curriculum vitae, you can download <a className="cvButton" download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
-                    <p className="is-hidden-desktop">Otherwise, If you just want my curriculum vitae, you can download <a style={{fontWeight:"800", color:"#1f3bd8"}} download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
+                    <p className="is-hidden-desktop">Otherwise, If you just want my curriculum vitae, you can download <a style={{ fontWeight: "800", color: "#1f3bd8" }} download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
 
                   </div>
+                </div>
+                <div>
+                
                 </div>
                 <div className="columns is-mobile is-centered is-hidden-mobile is-hidden-tablet-only" style={{ marginTop: "5%", marginBottom: "4%", marginLeft: "1%", marginRight: '2%' }}>
                   <div id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 0 ? { borderBottom: " 1px solid #e381ce", color: "black" } : {}}>
                     <figure class="image is-2by4">
-                    <h1>PERSONAL</h1>
-                      <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" style={{paddingTop:"5.5%"}} />
+                      <h1>PERSONAL</h1>
+                      <img className="is-rounded t1 active" src=""/>
                     </figure>
                   </div>
                   <div className="column has-text-centered">
-                    <div id="switch-component" style={{margin:"45%"}}>
+                    <div id="switch-component" style={{ margin: "45%" }}>
 
                       <label className="switch">
                         <input
@@ -89,8 +97,8 @@ export class AboutPageTemplate extends React.Component {
                   </div>
                   <div id="formal" id="informal" className="column has-text-centered is-4" style={this.state.imgVal == 1 ? { borderBottom: " 1px solid #1f3bd8", color: "black" } : {}}>
                     <figure class="image is-2by4">
-                    <h1>BUSSINESS</h1>
-                      <img className="is-rounded" src='https://i.gyazo.com/f53ce02129039f126eece15dd8997086.png' />
+                      <h1>BUSSINESS</h1>
+                      <img className="is-rounded t2" src='' />
                     </figure>
                   </div>
                 </div>
@@ -122,13 +130,13 @@ export class AboutPageTemplate extends React.Component {
               <div className="column is-hidden-desktop is-hidden-tablet-only">
                 <div id='imgVal1' className='is-block columnToggle'>
                   <figure class="image is-2by4">
-                  
+
                     <img className="is-rounded" src="https://i.gyazo.com/72c77f691c2cc62488ad439df0221877.png" />
                   </figure>
                 </div>
                 <div id='imgVal2' className='is-hidden columnToggle'>
                   <figure class="image is-2by4">
-                 
+
                     <img className="is-rounded" src='https://i.gyazo.com/f53ce02129039f126eece15dd8997086.png' />
                   </figure>
                 </div>
@@ -142,7 +150,7 @@ export class AboutPageTemplate extends React.Component {
           </div>
           <div id="intro" class="is-hidden  columnToggle content is-medium">
             This section will be similar to curriculum vitae, with intention to show the visitor my skills, competencies and job experiences.
-            Take a sit, something warm to drink and enjoy, because I like to write and this will be long.          
+            Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
 
           </div>
           <PageContent className="content is-medium" content={content} />
