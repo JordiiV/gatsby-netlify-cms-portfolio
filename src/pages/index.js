@@ -1,5 +1,7 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
+import Typing from 'react-typing-animation';
+
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import AwesomeSlider from 'react-awesome-slider';
@@ -15,26 +17,34 @@ export default class IndexPage extends React.Component {
         <section className={"hero is-fullheight is-large is-hidden-desktop header-image-mobile is-dark is-hidden-tablet-only"}>
           <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
             <div className="container container-mobile " style={{ marginTop: "-8%", padding: "11% 13% 10% 5%", backgroundColor: "#02eaea" }}>
+            <Typing>
               <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "3rem" }}>
                 Hi
               </h1>
-              <h1 className="title" style={{ color: 'white', fontWeight: "700" }}>
+              <Typing.Speed ms={150} />
+              <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "2.5rem" }}>
                 I'm the Mead Baron
-                    </h1>
+              </h1>
+              <Typing.Speed ms={10} />
               <h2 className="title" style={{ color: 'red' }}>(This site is under construction!)</h2>
+              </Typing>
             </div>
           </div>
         </section>
-        <section className={"hero is-fullheight hero-foo is-large is-hidden-mobile is-dark"}>
+        <section className={"hero is-fullheight hero-foo is-medium is-hidden-mobile is-dark"}>
           <div className="hero-body" style={{ margin: '5% 0px 0px 0px' }}>
             <div className="container container-mobile" style={{ marginTop: "-8%", padding: "11% 13% 10% 5%" }}>
-              <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "3rem" }}>
+            <Typing>
+              <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "4rem" }}>
                 Hi
-                  </h1>
-              <h1 className="title" style={{ color: 'white', fontWeight: "700" }}>
+              </h1>
+              <Typing.Speed ms={150} />
+              <h1 className="title" style={{ color: 'white', fontWeight: "700", fontSize: "4rem" }}>
                 I'm the Mead Baron
-                  </h1>
+              </h1>
+              <Typing.Speed ms={10} />             
               <h2 className="title" style={{ color: 'red' }}>(This site is under construction!)</h2>
+            </Typing>
             </div>          
           </div>
         </section>

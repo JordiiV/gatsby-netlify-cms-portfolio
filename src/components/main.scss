@@ -121,28 +121,35 @@ a{
 }
 
 p{
-	font-size:20px;
+	font-size:25px;
 }
 .t1{
-	padding-top:100%;
-	background-image:url(https://lh6.googleusercontent.com/pzA0IiYe__W_CDgannCbIRhJLFfPYIvZtNhdgO1zbXuSqZH6_T8WtWzpjJSZn7-zi-UoghCpq-lUd6_fXnr5Gyxv-UhehcYVi4srSjXAKTif1C4Ds7tNZFof5MFXjOGEEjoUCCc);
+	padding-top:100%;	
+	background-position: center;
+	background-image:url(https://i.gyazo.com/2418594c41c83172090b4909a7d82c08.png);
   }
 
 .t2{
 	padding-top:100%;
-	background-image:url(https://4.bp.blogspot.com/-Sc9_SmZidP0/Wggn-8zugII/AAAAAAAMwXI/3CeoqAORILk_wFhgpxdkx7mR5PS9WL6GQCLcBGAs/s1600/AW620385_08.gif)
+	background-image:url(https://i.gyazo.com/5624879188ce27893d12fdb121c6cd78.png);
+	background-position: center;
+	background-size: 150%;
+
+
   }
 
 .t1:hover, .t1.active{
 	background-image:url(https://vignette.wikia.nocookie.net/game-concepts-and-ideas/images/4/4b/77307-playing-videogame-gif-Nh7l_zps4ff57164.gif/revision/latest?cb=20150829210220);
-  }
-  .t1:hover::before, .t1.active::before{
-	 background: url(http://i62.tinypic.com/mmbh1x.jpg) 0 0 no-repeat;
-  }
-  .t2:hover, .t2.active{
-	background-image:url(https://2.bp.blogspot.com/-VCfEGAG4t-o/Wggn8L5RklI/AAAAAAAMwWk/bPuYzYlLjdgzffsbCUV5Gc8PLtkRUG8JQCLcBGAs/s1600/AW620385_00.gif);
 	background-position: center;
   }
-  .t2:hover::before, .t2.active::before{
-	 background: url(https://2.bp.blogspot.com/-VCfEGAG4t-o/Wggn8L5RklI/AAAAAAAMwWk/bPuYzYlLjdgzffsbCUV5Gc8PLtkRUG8JQCLcBGAs/s1600/AW620385_00.gif) -100px 0px no-repeat;
+  .t1:hover::before, .t1.active::before{
+	 background: url(https://vignette.wikia.nocookie.net/game-concepts-and-ideas/images/4/4b/77307-playing-videogame-gif-Nh7l_zps4ff57164.gif/revision/latest?cb=20150829210220) 0 0 no-repeat;
   }
+  .t2:hover, .t2.active{
+	background-image:url(https://i.imgur.com/9uQCqTn.gif);
+	background-position: center;
+	background-size: 150%;
+  }
+  .t2:hover::before, .t2.active::before{
+	background: url(https://i.imgur.com/9uQCqTn.gif) 0 0 no-repeat;
+}

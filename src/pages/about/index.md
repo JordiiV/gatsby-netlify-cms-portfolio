@@ -2,12 +2,6 @@
 templateKey: about-page
 title: About me
 ---
-<!-- <div class="columns">
-<div id="intro" class="column toggle columnToggle">
-This section will be similar to a bio, with intention to show the visitor a little bit of myself, my interests and how i endend developing.
-Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
-</div>
-</div> -->
 
 <div class="columns">
 
@@ -77,20 +71,32 @@ I started to dive in the sea and pools before i learned to swim (obvious no? if 
 
 </div>
 
-<!-- <div class="columns">
-<div id="intro" class="column is-hidden toggle columnToggle">
-This section will be similar to curriculum vitae, with intention to show the visitor my skills and job experiences.
-Take a sit, something warm to drink and enjoy, because I like to write and this will be long.
-</div>
-</div> -->
+
 
 <div id="column3" class="toggle column is-hidden columnToggle">
+<div id="resume" class="toggle">
 
 ### Resume
 
 Archaeologist and Front-end developer, also league of legends caster in my free time. Actually I'm working as Junior developer in a multinational tech company, specially learning and working with React, Redux and Bootstrap. I'm also interested in mobile apps developing and specially in videogame developing and level design.I expect to develop myself as a professional in this field, and continue developing my competencies and skills the better I can.
 
+</div>
 
+<div id="resume" class="toggle">
+
+### Resume
+
+Archaeologist and Front-end developer, also league of legends caster in my free time. Actually I'm working as Junior developer in a multinational tech company, specially learning and working with React, Redux and Bootstrap. I'm also interested in mobile apps developing and specially in videogame developing and level design.I expect to develop myself as a professional in this field, and continue developing my competencies and skills the better I can.
+
+</div>
+
+<div id="resume" class="toggle">
+
+### Resume
+
+Archaeologist and Front-end developer, also league of legends caster in my free time. Actually I'm working as Junior developer in a multinational tech company, specially learning and working with React, Redux and Bootstrap. I'm also interested in mobile apps developing and specially in videogame developing and level design.I expect to develop myself as a professional in this field, and continue developing my competencies and skills the better I can.
+
+</div>
 </div>
 
 
