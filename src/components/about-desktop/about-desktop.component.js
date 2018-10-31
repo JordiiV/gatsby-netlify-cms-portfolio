@@ -29,9 +29,8 @@ export default class AboutDesktop extends React.Component {
       }
 
     render() {
-        let {toggleImgVal, imgVal = imgValDesktop} = this.props;  
+        let {toggleImgVal, imgVal} = this.props;  
         let {imgValDesktop} = this.state;    
-        console.log(imgValDesktop)
         return (
 
             <div className="columns is-centered is-hidden-mobile is-hidden-tablet-only" style={{ marginTop: "5%", marginBottom: "4%", marginLeft: "1%", marginRight: '2%' }}>

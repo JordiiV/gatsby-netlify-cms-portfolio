@@ -74,7 +74,7 @@ I started to dive in the sea and pools before i learned to swim (obvious no? if 
 
 
 <div id="column3" class="toggle column is-hidden columnToggle">
-<div id="resume" class="toggle">
+<div id="resume" class="toggle3">
 
 ### Resume
 
