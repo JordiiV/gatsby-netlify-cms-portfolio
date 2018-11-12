@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom'
+import back from '../space-invader/back'
 
 class CanvasComponent extends React.Component {
 
@@ -15,6 +16,13 @@ class CanvasComponent extends React.Component {
             ctx = this.refs.canvas.getContext('2d'),
             brickWidth = (Width / 10) - 2.25;
 
+        let ball2 = {
+            x: (Width / 2) - 3,
+            y: (Height / 2) - 3,
+            radius: 6,
+            speedX: 0,
+            speedY: 6
+        }
         let ball = {
             x: (Width / 2) - 3,
             y: (Height / 2) - 3,
@@ -27,11 +35,12 @@ class CanvasComponent extends React.Component {
                 h: 10,
                 x: Width / 2 - (100 / 2),// 100 is paddle.w
                 y: Height - 10,
-                speed: 6
+                speed: 10
             },
             bricks = [],
             bonuses = [],
-            ballOn = false, color,
+            ballOn = false,
+            color,
             gameOver = 0; // 1 you lost - 2 you win
 
         function KeyListener() {
@@ -55,6 +64,7 @@ class CanvasComponent extends React.Component {
         // create bonus block
         function createBonus(brick) {
             let chance = Math.floor(Math.random() * (10 - 1 + 1) + 1);
+            // let chance = 1;
             if (chance === 1) {
                 let randomNum = Math.floor(Math.random() * (4 - 1 + 1) + 1),
                     bonus = {
@@ -69,22 +79,22 @@ class CanvasComponent extends React.Component {
         }
         // create array 60 bricks
         function createBricks() {
-
-            let colors = ["#18582b", "#0c905d", "#00c78e", "#33dbff", "#3375ff", "#5733ff"];
-            let brickX = 2, brickY = 10, j = 0, a = 0;
+            let colors = ["#18582b", "#0c905d", "#00c78e", "#33dbff", "#3375ff", "#5733ff", "#00c78e"];
+            let brickX = 1, brickY = 10, j = 0, a = 0;
+            
             for (var i = 0; i < 60; i++) {
                 let brick = {
                     x: brickX,
                     y: brickY,
                     w: brickWidth,
-                    h: 10,
+                    h: 14,
                     color: colors[j]
                 }
                 bricks.push(brick);
                 brickX += brickWidth + 2;
                 if (brickX + brickWidth + 2 > Width) {
-                    brickY += 12;
-                    brickX = 2;
+                    brickY +=14;
+                    brickX = 1;
                     j++;
                 }
             }
@@ -139,37 +149,38 @@ class CanvasComponent extends React.Component {
                 h: 10,
                 x: Width / 2 - (100 / 2),// 100 is paddle.w
                 y: Height - 10,
-                speed: 6
+                speed: 10
             };
         }
 
         function draw() {
             ctx.clearRect(0, 0, Width, Height)
             var my_gradient = ctx.createLinearGradient(0, 0, 0, 170);
+            const backgroundImage={back};
             my_gradient.addColorStop(0, "white");
-            my_gradient.addColorStop(1, "black");
-            ctx.fillStyle = my_gradient; // background
+            my_gradient.addColorStop(1, "gray");
+            ctx.fillStyle =my_gradient// background
             ctx.fillRect(0, 0, Width, Height);
             // paddle
-            ctx.fillStyle = "#fff";
+            ctx.fillStyle = "#ff8aff";
             ctx.fillRect(paddle1.x, paddle1.y, paddle1.w, paddle1.h);
 
             if (ballOn === false) {
                 ctx.font = "14px Roboto Mono";
                 ctx.textAlign = "center";
-                ctx.fillText("Press spacebar to start a new game.", Width / 2, (Height / 2) - 25);
+                ctx.fillText("Press spacebar to start a new game.", Width / 2, (Height / 2) - -30);
                 ctx.font = "12px Roboto Mono";
-                ctx.fillText("Move with arrow keys or A & D.", Width / 2, (Height / 2) + 25);
+                ctx.fillText("Move with arrow keys or A & D.", Width / 2, (Height / 2) + 50);
                 if (gameOver === 1) {
                     ctx.font = "52px Roboto Mono";
-                    ctx.fillText("YOU LOST!", Width / 2, (Height / 2) - 90);
+                    ctx.fillText("YOU ARE DEAD!", Width / 2, (Height / 2) - 50);
                     ctx.font = "36px Roboto Mono";
-                    ctx.fillText("Keep trying!", Width / 2, (Height / 2) - 50);
+                    ctx.fillText("Another try?", Width / 2, (Height / 2) - 20);
                 } else if (gameOver === 2) {
                     ctx.font = "52px Roboto Mono";
-                    ctx.fillText("YOU WON!", Width / 2, (Height / 2) - 90);
+                    ctx.fillText("YOU WON!", Width / 2, (Height / 2) - 25);
                     ctx.font = "36px Roboto Mono";
-                    ctx.fillText("Congratulations!", Width / 2, (Height / 2) - 50);
+                    ctx.fillText("Congratulations!", Width / 2, (Height / 2) - 25);
                 }
             }
             // ball
@@ -187,11 +198,15 @@ class CanvasComponent extends React.Component {
                     color = "#c0392b";
                     ctx.fillStyle = color;
                     ctx.fillRect(bonuses[i].x, bonuses[i].y, bonuses[i].w, bonuses[i].h);
+                    ctx.font = "52px Roboto Mono";
+                    ctx.fillText("Reduce paddle!", Width / 2, (Height / 2) - 50);
                 } // increase paddle
                 else if (bonuses[i].type === 2) {
                     color = "#27ae60"
                     ctx.fillStyle = color;
                     ctx.fillRect(bonuses[i].x - bonuses[i].w / 2, bonuses[i].y, bonuses[i].w * 2, bonuses[i].h);
+                    ctx.font = "52px Roboto Mono";
+                    ctx.fillText("Increase paddle!", Width / 2, (Height / 2) - 50);
                 } // ball speedY --
                 else if (bonuses[i].type === 3) {
                     color = "#2980b9"
@@ -199,6 +214,8 @@ class CanvasComponent extends React.Component {
                     ctx.beginPath();
                     ctx.arc(bonuses[i].x, bonuses[i].y, ball.radius - 2, 0, Math.PI * 2);
                     ctx.fill();
+                    ctx.font = "52px Roboto Mono";
+                    ctx.fillText("Ball speed DOWN!", Width / 2, (Height / 2) - 50);
                 } // ball speedY ++
                 else {
                     color = "#f1c40f"
@@ -206,6 +223,10 @@ class CanvasComponent extends React.Component {
                     ctx.beginPath();
                     ctx.arc(bonuses[i].x, bonuses[i].y, ball.radius + 2, 0, Math.PI * 2);
                     ctx.fill();
+                    ctx.font = "52px Roboto Mono";
+                    ctx.fillText("Ball speed UP!", Width / 2, (Height / 2) -50);
+                    ballOn = true;
+                    
                 }
             }
         }
@@ -218,11 +239,11 @@ class CanvasComponent extends React.Component {
                     if (bonuses[i].type === 1) {
                         paddle1.w -= 10;
                     } else if (bonuses[i].type === 2) {
-                        paddle1.w += 10;
+                        paddle1.w += 30;
                     } else if (bonuses[i].type === 3) {
-                        ball.radius -= 1;
+                        ball.speed -= 1;
                     } else {
-                        ball.radius += 1;
+                        ball.speed += 1;
                     }
                     bonuses.splice(i, 1);
                     return;
@@ -290,7 +311,7 @@ class CanvasComponent extends React.Component {
 
     render() {
         const gameWidth = 2000;
-        const gameHeight = document.documentElement.clientHeight;
+        const gameHeight = 450;
         return (
             <div>
                 <canvas ref="canvas" width={gameWidth}

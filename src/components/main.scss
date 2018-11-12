@@ -74,7 +74,8 @@
 body {
     display: flex;
     min-height: 100vh;
-    flex-direction: column;
+	flex-direction: column;
+	font-family: 'VT323';
   }
   .navbar{
       background-color:#fafafa;
@@ -101,12 +102,6 @@ body {
  //Selector
 
  @import url(https://fonts.googleapis.com/css?family=VT323);
-
-body{
-  font-family: 'VT323';
-//   text-align:center;
-//   background:#111 url(https://subtlepatterns.com/patterns/dirty_old_shirt.png)
-}
 
 
 h1{
@@ -152,4 +147,11 @@ p{
   }
   .t2:hover::before, .t2.active::before{
 	background: url(https://i.imgur.com/9uQCqTn.gif) 0 0 no-repeat;
+}
+
+#space{
+	.content{
+		max-height: 900px;
+		overflow: hidden;
+	}
 }

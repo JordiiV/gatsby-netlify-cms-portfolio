@@ -11,7 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
         module: {
           rules: [
             {
-              test: /bad-module/ | /scroll-to-element/,
+              test: /bad-module/,
               use: loaders.null(),
             },
           ],
