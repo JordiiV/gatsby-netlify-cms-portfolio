@@ -11,7 +11,7 @@ exports.createPages = ({ actions, graphql }) => {
         module: {
           rules: [
             {
-              test: /bad-module/,
+              test: /bad-module/ | /scroll-to-element/,
               use: loaders.null(),
             },
           ],
@@ -20,16 +20,6 @@ exports.createPages = ({ actions, graphql }) => {
     }
   }
 
-  exports.modifyWebpackConfig = ({ config, stage }) => {
-    if (stage === "build-html") {
-      config.loader("null", {
-        test: /scroll-to-element/,
-        loader: "null-loader"
-      });
-    }
-  
-    return config;
-  };
   
   return graphql(`
     {
