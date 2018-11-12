@@ -13,7 +13,7 @@ class SpaceInvaders extends Component {
                             <h1 className="has-text-weight-bold is-size-2">Game sample : ARKANOID</h1>
                         </div>
                         <div className="row">
-                        <div className="col" style={{marginLeft:"18%"}}>
+                        <div className="col" style={{marginLeft:"18%", backgroundImage:""}}>
                         <CanvasComponent />
                         </div>
                         
