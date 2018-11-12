@@ -10,7 +10,6 @@ import AboutMobile from '../components/about-mobile/about-mobile.component'
 import Content, { HTMLContent } from '../components/Content'
 import '../components/switch/switch';
 import '../components/main.scss'
-import { SSL_OP_DONT_INSERT_EMPTY_FRAGMENTS } from 'constants';
 
 
 export class AboutPageTemplate extends React.Component {
@@ -26,13 +25,6 @@ export class AboutPageTemplate extends React.Component {
   }
 
 
-  showModal = () => {
-    jQuery("#showModal").addClass("is-active");
-  }
-
-  hideModal = () => {
-    jQuery(".modal").removeClass("is-active");
-  }
 
   toggleImgVal = (e) => {
     const imgVal = 0;
@@ -63,10 +55,10 @@ export class AboutPageTemplate extends React.Component {
                   <div id="intro" class="content">
                     <p style={{ fontSize: "28px" }}>My name is Jordi and i'm from Barcelona, Spain. If you are interested in my <span className="has-text-weight-bold">personal interests</span> continue reading.
                     <br />
-                      If you are just interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
+                      If you are interested in my <span className="has-text-weight-bold">bussines mode</span>, click this switch button.
                     </p>
                     <p className="is-hidden-mobile" style={{ fontSize: "28px" }}>Otherwise, If you just want my curriculum vitae, you can download <a style={{ fontSize: "30px" }} className="cvButton" download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
-                    <p className="is-hidden-desktop" style={{ fontSize: "28px" }}>Otherwise, If you just want my curriculum vitae, you can download <a style={{ fontWeight: "800", color: "#1f3bd8" }} download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
+                    <p className="is-hidden-desktop is-hidden-tablet-only" style={{ fontSize: "28px" }}>Otherwise, If you just want my curriculum vitae, you can download <a style={{ fontWeight: "800", color: "#1f3bd8" }} download="curriculum" target="_blank" href="https://app.box.com/s/89mk056ydtu5rq2lc69xfp45ybx2144a">HERE</a></p>
                   </div>
                 </div>
 

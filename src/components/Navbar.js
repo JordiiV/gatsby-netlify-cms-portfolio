@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import rhino from '../img/rhino.svg'
 import jQuery from 'jquery'
 import './main.scss'
+
 export default class Navbar extends React.Component {
 
   crossBurguer = () => {
@@ -11,33 +12,36 @@ export default class Navbar extends React.Component {
 
   render() {
     return (
-      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor:"#f1f1f1", height:"6%"}}>
+      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor: "#f1f1f1", height: "6%" }}>
 
 
-     <div className="container">
-        <div className="navbar-brand">
-          <Link to="/" className="navbar-item">
-            <figure className="image">
-              <img src={rhino} alt="Rhino" style={{ width: '35px', height:"100%", maxHeight:"2.75rem" }} />
-            </figure>
-          </Link>
-          <div class="navbar-burger burger" onClick={this.crossBurguer} data-target="navbarMenuHeroA">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div className="container">
+          <div className="navbar-brand">
+            <Link to="/" className="navbar-item">
+              <figure className="image">
+                <img src={rhino} alt="Rhino" style={{ width: '35px', height: "100%", maxHeight: "2.75rem" }} />
+              </figure>
+            </Link>
+            <div class="navbar-burger burger" onClick={this.crossBurguer} data-target="navbarMenuHeroA">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
-        </div>
-          <div className="navbar-menu navbar-end" id="navbarMenuHeroA" style={{ backgroundColor:"#f1f1f1" }}>
+          <div className="navbar-menu navbar-end" id="navbarMenuHeroA" style={{ backgroundColor: "#f1f1f1" }}>
             <Link className='navbar-item' activeClassName="active" exact to="/about">
               About
-          </Link>
+            </Link>
             <Link className='navbar-item' activeClassName="active" to="/products">
               Blog
-          </Link>
+            </Link>
+            <Link className='navbar-item is-hidden-mobile' activeClassName="active" to="/space">
+              Game
+            </Link>
           </div>
-          </div>
+        </div>
       </nav>
-      
+
 
     )
   }
