@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types'
 import ReactDOM from 'react-dom'
 import back from '../space-invader/back'
 
@@ -8,10 +9,17 @@ class CanvasComponent extends React.Component {
     componentDidMount() {
         this.update();
     }
+    
+    static propTypes = {
+        count: PropTypes.num,
+      }
+    state={
+        count: this.props.count
+    }
 
     update() {
 
-        const Width = 800,
+        const Width = 1000,
             Height = 450,
             ctx = this.refs.canvas.getContext('2d'),
             brickWidth = (Width / 10) - 2.25;
@@ -155,14 +163,13 @@ class CanvasComponent extends React.Component {
 
         function draw() {
             ctx.clearRect(0, 0, Width, Height)
-            var my_gradient = ctx.createLinearGradient(0, 0, 0, 170);
-            const backgroundImage={back};
-            my_gradient.addColorStop(0, "white");
-            my_gradient.addColorStop(1, "gray");
-            ctx.fillStyle =my_gradient// background
+            var my_gradient = ctx.createLinearGradient(50,0,0,750);           
+            my_gradient.addColorStop(0, "black");            
+            my_gradient.addColorStop(1, "white");
+            ctx.fillStyle ="rgba(255, 255, 255, 0)";// background
             ctx.fillRect(0, 0, Width, Height);
             // paddle
-            ctx.fillStyle = "#ff8aff";
+            ctx.fillStyle = my_gradient;
             ctx.fillRect(paddle1.x, paddle1.y, paddle1.w, paddle1.h);
 
             if (ballOn === false) {
@@ -178,9 +185,9 @@ class CanvasComponent extends React.Component {
                     ctx.fillText("Another try?", Width / 2, (Height / 2) - 20);
                 } else if (gameOver === 2) {
                     ctx.font = "52px Roboto Mono";
-                    ctx.fillText("YOU WON!", Width / 2, (Height / 2) - 25);
+                    ctx.fillText("YOU WON!", Width / 2, (Height / 2) - 50);
                     ctx.font = "36px Roboto Mono";
-                    ctx.fillText("Congratulations!", Width / 2, (Height / 2) - 25);
+                    ctx.fillText("Congratulations!", Width / 2, (Height / 2) - 20);
                 }
             }
             // ball
@@ -270,7 +277,7 @@ class CanvasComponent extends React.Component {
                 ball.x += ball.speedX;
                 ball.y += ball.speedY;
                 // check ball hit ceiling
-                if (ball.y <= 0) {
+                if (ball.y < 0) {
                     ball.speedY = -ball.speedY;
                 }
                 // check ball hit paddle and angle
@@ -288,7 +295,7 @@ class CanvasComponent extends React.Component {
                 // check if lost
                 if (ball.y > Height) {
                     gameOver = 1;
-                    newGame();
+                    newGame();                    
                 }
                 destroyBrick();
                 // check if win
@@ -310,11 +317,11 @@ class CanvasComponent extends React.Component {
     }
 
     render() {
-        const gameWidth = 2000;
+        const gameWidth = 1000;
         const gameHeight = 450;
         return (
-            <div>
-                <canvas ref="canvas" width={gameWidth}
+            <div id="canvasBack">
+                <canvas  ref="canvas" width={gameWidth}
                     height={gameHeight} id="gameCanvas" />
             </div>
         )

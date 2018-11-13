@@ -76,6 +76,8 @@ body {
     min-height: 100vh;
 	flex-direction: column;
 	font-family: 'VT323';
+	overflow:hidden !important;
+	
   }
   .navbar{
       background-color:#fafafa;
@@ -150,8 +152,13 @@ p{
 }
 
 #space{
+	max-width:-webkit-fill-available;
 	.content{
 		max-height: 900px;
-		overflow: hidden;
+		
 	}
+	#canvasBack{
+		height:-webkit-fill-available;
+	}
+	background-image: url("http://pavbca.com/walldb/original/0/4/1/168588.jpg");
 }

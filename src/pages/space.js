@@ -1,31 +1,35 @@
 import React, { Component } from 'react';
-import Layout from '../components/Layout';
+import LayoutNoFoot from '../components/LayoutNoFoot';
 import CanvasComponent from '../components/space-invader/starfield';
 
 class SpaceInvaders extends Component {
-    render() {         
-        return (
+
+    state={
+        count: 0
+    }
+
+    render() {
         
-            <Layout>
-                <section id="space" className="section" style={{ paddingTop: "6rem"}}>
+        return (
+
+            <LayoutNoFoot>
+                <section id="space" className="section" style={{ paddingTop: "6rem" }}>
                     <div id="container" className="container">
                         <div className="content">
-                            <h1 className="has-text-weight-bold is-size-2">Game sample : ARKANOID</h1>
+                            <div className="row">
+                                <div className="col" style={{ marginLeft: "0%", marginTop: "5%", backgroundImage: "" }}>
+                                    <div id="" className="col" style={{ marginLeft: "1%", marginTop: "-5%", backgroundImage: "" }}> 
+                                    <CanvasComponent />
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div className="row">
-                        <div className="col" style={{marginLeft:"18%", marginTop:"5%",   backgroundImage:""}}>
-                        <CanvasComponent />
-                        </div>
-                        
-                        
-                        </div>
-                            
                     </div>
                 </section>
-            </Layout>
+            </LayoutNoFoot>
 
         );
     }
 
-}  export default SpaceInvaders;
+} export default SpaceInvaders;
 
