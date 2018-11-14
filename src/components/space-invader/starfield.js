@@ -164,8 +164,8 @@ class CanvasComponent extends React.Component {
         function draw() {
             ctx.clearRect(0, 0, Width, Height)
             var my_gradient = ctx.createLinearGradient(50,0,0,750);           
-            my_gradient.addColorStop(0, "black");            
-            my_gradient.addColorStop(1, "white");
+            my_gradient.addColorStop(0, "white");            
+            my_gradient.addColorStop(1, "rgba(202, 230, 251, 1)");
             ctx.fillStyle ="rgba(255, 255, 255, 0)";// background
             ctx.fillRect(0, 0, Width, Height);
             // paddle
@@ -175,6 +175,7 @@ class CanvasComponent extends React.Component {
             if (ballOn === false) {
                 ctx.font = "14px Roboto Mono";
                 ctx.textAlign = "center";
+                ctx.fillStyle ="black";
                 ctx.fillText("Press spacebar to start a new game.", Width / 2, (Height / 2) - -30);
                 ctx.font = "12px Roboto Mono";
                 ctx.fillText("Move with arrow keys or A & D.", Width / 2, (Height / 2) + 50);

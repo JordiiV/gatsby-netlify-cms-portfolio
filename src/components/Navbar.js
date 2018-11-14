@@ -35,9 +35,9 @@ export default class Navbar extends React.Component {
             <Link className='navbar-item' activeClassName="active" to="/products">
               Blog
             </Link>
-            <Link className='navbar-item is-hidden-mobile' activeClassName="active" to="/space">
+            {/* <Link className='navbar-item is-hidden-mobile' activeClassName="active" to="/space">
               Game
-            </Link>
+            </Link> */}
           </div>
         </div>
       </nav>

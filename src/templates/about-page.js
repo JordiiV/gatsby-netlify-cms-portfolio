@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import jQuery from 'jquery'
+import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
 import MenuAbout from '../components/MenuAbout'
@@ -21,18 +22,18 @@ export class AboutPageTemplate extends React.Component {
   }
 
   state = {
-   
+
   }
 
 
 
   toggleImgVal = (e) => {
     const imgVal = 0;
-    if (imgVal === 1) {      
+    if (imgVal === 1) {
       jQuery(".columnToggle").toggleClass('is-hidden');
       jQuery(".t1").toggleClass('active');
       jQuery(".t2").toggleClass('active');
-    } else {      
+    } else {
       jQuery(".columnToggle").toggleClass('is-hidden');
       jQuery(".t2").toggleClass('active');
       jQuery(".t1").toggleClass('active');
@@ -64,7 +65,7 @@ export class AboutPageTemplate extends React.Component {
 
                 <AboutDesktop
                   toggleImgVal={this.toggleImgVal}
-                  imgVal={this.state.imgVal}               
+                  imgVal={this.state.imgVal}
                 />
 
                 <AboutMobile
@@ -88,6 +89,15 @@ export class AboutPageTemplate extends React.Component {
             <PageContent className="content is-medium" content={content} />
 
           </div>
+          <div class="tooltip">
+            <span class="tooltiptext">Hey, You wanna play something?</span>
+          <figure class="image is-16x16">
+            <Link className='is-hidden-mobile' to="/space">
+              <img className="is-rounded" src='https://wow.zamimg.com/uploads/screenshots/small/449254.jpg' />
+            </Link>
+          </figure>
+          </div>
+
         </div>
       </section >
     )
