@@ -7,8 +7,7 @@ class CanvasComponent extends React.Component {
 
 
     componentDidMount() {
-        const windowGlobal = typeof window !== 'undefined' && window;
-       
+        
         this.update();
     }
 
@@ -320,7 +319,10 @@ class CanvasComponent extends React.Component {
     }
 
     render() {
-        const gameWidth = window.innerWidth;
+        let gameWidth;
+        if (typeof window !== `undefined`) {
+            gameWidth = window.innerWidth;
+          }
         const gameHeight = 450;
         return (
             <div id="canvasBack">
