@@ -19,7 +19,7 @@ class CanvasComponent extends React.Component {
 
     update() {
 
-        const Width = 1000,
+        const Width = window.innerWidth,
             Height = 450,
             ctx = this.refs.canvas.getContext('2d'),
             brickWidth = (Width / 10) - 2.25;
@@ -318,7 +318,7 @@ class CanvasComponent extends React.Component {
     }
 
     render() {
-        const gameWidth = 1000;
+        const gameWidth = window.innerWidth;
         const gameHeight = 450;
         return (
             <div id="canvasBack">
