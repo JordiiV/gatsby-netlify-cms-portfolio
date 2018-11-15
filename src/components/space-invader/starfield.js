@@ -7,13 +7,15 @@ class CanvasComponent extends React.Component {
 
 
     componentDidMount() {
+        const windowGlobal = typeof window !== 'undefined' && window;
+       
         this.update();
     }
-    
+
     static propTypes = {
         count: PropTypes.num,
-      }
-    state={
+    }
+    state = {
         count: this.props.count
     }
 
@@ -89,7 +91,7 @@ class CanvasComponent extends React.Component {
         function createBricks() {
             let colors = ["#18582b", "#0c905d", "#00c78e", "#33dbff", "#3375ff", "#5733ff", "#00c78e"];
             let brickX = 1, brickY = 10, j = 0, a = 0;
-            
+
             for (var i = 0; i < 60; i++) {
                 let brick = {
                     x: brickX,
@@ -101,7 +103,7 @@ class CanvasComponent extends React.Component {
                 bricks.push(brick);
                 brickX += brickWidth + 2;
                 if (brickX + brickWidth + 2 > Width) {
-                    brickY +=14;
+                    brickY += 14;
                     brickX = 1;
                     j++;
                 }
@@ -163,10 +165,10 @@ class CanvasComponent extends React.Component {
 
         function draw() {
             ctx.clearRect(0, 0, Width, Height)
-            var my_gradient = ctx.createLinearGradient(50,0,0,750);           
-            my_gradient.addColorStop(0, "white");            
+            var my_gradient = ctx.createLinearGradient(50, 0, 0, 750);
+            my_gradient.addColorStop(0, "white");
             my_gradient.addColorStop(1, "rgba(202, 230, 251, 1)");
-            ctx.fillStyle ="rgba(255, 255, 255, 0)";// background
+            ctx.fillStyle = "rgba(255, 255, 255, 0)";// background
             ctx.fillRect(0, 0, Width, Height);
             // paddle
             ctx.fillStyle = my_gradient;
@@ -175,7 +177,7 @@ class CanvasComponent extends React.Component {
             if (ballOn === false) {
                 ctx.font = "14px Roboto Mono";
                 ctx.textAlign = "center";
-                ctx.fillStyle ="black";
+                ctx.fillStyle = "black";
                 ctx.fillText("Press spacebar to start a new game.", Width / 2, (Height / 2) - -30);
                 ctx.font = "12px Roboto Mono";
                 ctx.fillText("Move with arrow keys or A & D.", Width / 2, (Height / 2) + 50);
@@ -232,9 +234,9 @@ class CanvasComponent extends React.Component {
                     ctx.arc(bonuses[i].x, bonuses[i].y, ball.radius + 2, 0, Math.PI * 2);
                     ctx.fill();
                     ctx.font = "52px Roboto Mono";
-                    ctx.fillText("Ball speed UP!", Width / 2, (Height / 2) -50);
+                    ctx.fillText("Ball speed UP!", Width / 2, (Height / 2) - 50);
                     ballOn = true;
-                    
+
                 }
             }
         }
@@ -296,7 +298,7 @@ class CanvasComponent extends React.Component {
                 // check if lost
                 if (ball.y > Height) {
                     gameOver = 1;
-                    newGame();                    
+                    newGame();
                 }
                 destroyBrick();
                 // check if win
@@ -322,7 +324,7 @@ class CanvasComponent extends React.Component {
         const gameHeight = 450;
         return (
             <div id="canvasBack">
-                <canvas  ref="canvas" width={gameWidth}
+                <canvas ref="canvas" width={gameWidth}
                     height={gameHeight} id="gameCanvas" />
             </div>
         )
