@@ -6,13 +6,36 @@ import './main.scss'
 
 export default class Navbar extends React.Component {
 
+  state = {
+    isHide: false
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.hideNavbar);
+  }
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.hideNavbar);
+  }
+
   crossBurguer = () => {
     jQuery('#navbarMenuHeroA, .navbar-burger').toggleClass('is-active');
   }
 
+  hideNavbar = () => {
+    let { isHide } = this.state
+    window.scrollY > this.prev ?
+      !isHide && this.setState({ isHide: true })
+      :
+      isHide && this.setState({ isHide: false })
+
+    this.prev = window.scrollY;
+  }
+
+
   render() {
+    let classHide = this.state.isHide ? "hide" : ""
     return (
-      <nav className="navbar is-fixed-top" style={{ marginBottom: '5%', backgroundColor: "#f1f1f1", height: "6%" }}>
+      <nav className={"navbar is-fixed-top " + classHide} style={{transitionDuration: "1s", marginBottom: '5%', backgroundColor: "#f1f1f1", height: "6%" }}>
 
 
         <div className="container">

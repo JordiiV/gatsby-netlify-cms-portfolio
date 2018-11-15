@@ -189,3 +189,8 @@ p{
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+.hide{
+	top:-60px !important;
+	transition: top 1s ease 0s;
+}
