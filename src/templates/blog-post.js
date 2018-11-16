@@ -13,8 +13,7 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
-  youtube
+  helmet
 }) => {
   const PostContent = contentComponent || Content
 
@@ -68,7 +67,6 @@ const BlogPost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
-        youtube={post.frontmatter.youtube}
       />
     </Layout>
   )
