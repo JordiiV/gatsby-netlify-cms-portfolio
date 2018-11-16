@@ -12,7 +12,8 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet
+  helmet,
+  youtube
 }) => {
   const PostContent = contentComponent || Content
 
@@ -52,6 +53,7 @@ BlogPostTemplate.propTypes = {
   description: PropTypes.string,
   title: PropTypes.string,
   helmet: PropTypes.instanceOf(Helmet),
+  youtube: PropTypes.object
 }
 
 const BlogPost = ({ data }) => {
@@ -66,6 +68,7 @@ const BlogPost = ({ data }) => {
         helmet={<Helmet title={`${post.frontmatter.title} | Blog`} />}
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        youtube={post.frontmatter.youtube}
       />
     </Layout>
   )
