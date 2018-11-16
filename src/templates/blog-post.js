@@ -91,7 +91,7 @@ export const pageQuery = graphql`
         title
         description
         tags
-        fieldname
+        youtube
       }
     }
   }
