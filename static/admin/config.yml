@@ -18,7 +18,6 @@ collections:
       - {label: "Description", name: "description", widget: "text"}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Tags", name: "tags", widget: "list"}
-      - {name: <fieldname>, label: <fieldlabel>, widget: youtube, exportID: false }
   - name: "pages"
     label: "Pages"
     files:
