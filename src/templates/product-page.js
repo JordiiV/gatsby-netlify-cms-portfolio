@@ -17,13 +17,12 @@ export default class ProductPage extends React.Component {
           <div className="container" style={{ backgroundColor:"white",}}>
             <div className="content">
               <h1 className="has-text-weight-bold is-size-2">Blog</h1>
-
             </div>
 
             <div className="level is-mobile">
             <ul className="level-item">
             <p><Link className="has-text-primary is-pulled-right" to="/tags"><h5>TAGs:</h5></Link></p>
-              {group.slice(0,4).map(tag => (
+              {group.slice(0,3).map(tag => (
                 <li key={tag.fieldValue}>
                 {group.length < 20 ?
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
