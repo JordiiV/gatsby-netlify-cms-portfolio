@@ -25,7 +25,7 @@ export default class ProductPage extends React.Component {
             <p><Link className="has-text-primary is-pulled-right" to="/tags"><h5>TAGs:</h5></Link></p>
               {group.slice(0,4).map(tag => (
                 <li key={tag.fieldValue}>
-                {group.length < 10 ?
+                {group.length < 20 ?
                   <Link to={`/tags/${kebabCase(tag.fieldValue)}/`}>
                     {tag.fieldValue} ({tag.totalCount})
                   </Link>
