@@ -14,10 +14,8 @@ const TemplateWrapperNoFooter = ({ children }) => (
       ]}
     />
     <Navbar />
-    <div className="">{children}</div>
-    
+    <div className="">{children}</div>    
   </div>
 )
-
 
 export default TemplateWrapperNoFooter

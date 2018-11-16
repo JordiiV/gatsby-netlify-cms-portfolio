@@ -17,14 +17,12 @@ class SpaceInvaders extends Component {
                     <div id="container" className="">
                         <div className="content">
                             <div className="columns is-centered">
-                            <div className="column is-quarter" style={{ marginLeft: "0%", marginTop: "5%", backgroundImage: "" }}>
-                                   
+                                <div className="column is-quarter" style={{ marginLeft: "0%", marginTop: "5%", backgroundImage: "" }}>
                                 </div>
-                                <div className="column is-quarter" style={{ maxHeight:"750px", marginLeft: "0%", marginTop: "%", backgroundImage: "" }}>
+                                <div className="column is-quarter" style={{ maxHeight: "750px", marginLeft: "0%", marginTop: "%", backgroundImage: "" }}>
                                     <CanvasComponent />
                                 </div>
                                 <div className="column is-quarter" style={{ marginLeft: "0%", marginTop: "5%", backgroundImage: "" }}>
-                                   
                                 </div>
                             </div>
                         </div>

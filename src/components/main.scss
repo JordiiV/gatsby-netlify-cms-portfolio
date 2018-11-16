@@ -71,14 +71,33 @@
     to {opacity: 1;}
 }
 
-body {
+body, html {
     display: flex;
     min-height: 100vh;
 	flex-direction: column;
 	font-family: 'VT323';
-	overflow:hidden !important;
+	// overflow:hidden !important;
+	::-webkit-scrollbar {
+		width: 0px;
+	}
 	
-  }
+	/* Track */
+	::-webkit-scrollbar-track {
+		background: #f1f1f1; 
+	}
+	
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+		background: #888; 
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+		background: #555; 
+	}
+	}
+	
+
   .navbar{
       background-color:#fafafa;
   }
@@ -153,7 +172,6 @@ p{
 
 #space{
 	max-width:-webkit-fill-available;
-	// background-image: url("http://pavbca.com/walldb/original/0/4/1/168588.jpg");
 	background: rgba(255, 255, 255, 0.2) url("http://pavbca.com/walldb/original/0/4/1/168588.jpg") no-repeat 0 50%;
 	.content{
 		

@@ -5,17 +5,16 @@ import back from '../space-invader/back'
 
 class CanvasComponent extends React.Component {
 
-
-    componentDidMount() {
-        
-        this.update();
-    }
-
     static propTypes = {
         count: PropTypes.num,
     }
+
     state = {
         count: this.props.count
+    }
+
+    componentDidMount() {        
+        this.update();
     }
 
     update() {
@@ -25,13 +24,6 @@ class CanvasComponent extends React.Component {
             ctx = this.refs.canvas.getContext('2d'),
             brickWidth = (Width / 10) - 2.25;
 
-        let ball2 = {
-            x: (Width / 2) - 3,
-            y: (Height / 2) - 3,
-            radius: 6,
-            speedX: 0,
-            speedY: 6
-        }
         let ball = {
             x: (Width / 2) - 3,
             y: (Height / 2) - 3,
@@ -59,9 +51,11 @@ class CanvasComponent extends React.Component {
             document.addEventListener("keydown", this.keydown.bind(this));
             document.addEventListener("keyup", this.keyup.bind(this));
         }
+
         KeyListener.prototype.isPressed = function (key) {
             return this.pressedKeys[key] ? true : false;
         };
+
         KeyListener.prototype.addKeyPressListener =
             function (keyCode, callback) {
                 document.addEventListener("keypress", function (e) {
@@ -69,6 +63,7 @@ class CanvasComponent extends React.Component {
                         callback(e);
                 });
             };
+            
         var keys = new KeyListener();
         // create bonus block
         function createBonus(brick) {
@@ -86,6 +81,7 @@ class CanvasComponent extends React.Component {
                 bonuses.push(bonus)
             }
         }
+
         // create array 60 bricks
         function createBricks() {
             let colors = ["#18582b", "#0c905d", "#00c78e", "#33dbff", "#3375ff", "#5733ff", "#00c78e"];
@@ -108,6 +104,7 @@ class CanvasComponent extends React.Component {
                 }
             }
         }
+
         createBricks();
         // check collision !!ball must be first!!
         function checkCollision(obj1, obj2) {
@@ -127,6 +124,7 @@ class CanvasComponent extends React.Component {
                 }
             }
         }
+
         // if ball touch brick destroy
         function destroyBrick() {
             for (var i = 0; i < bricks.length; i++) {
@@ -137,6 +135,7 @@ class CanvasComponent extends React.Component {
                 }
             }
         }
+
         // reset everything for a new gme
         function newGame() {
             bricks = [];
@@ -192,15 +191,18 @@ class CanvasComponent extends React.Component {
                     ctx.fillText("Congratulations!", Width / 2, (Height / 2) - 20);
                 }
             }
+
             // ball
             ctx.beginPath();
             ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
             ctx.fill();
+
             //bricks
             for (var i = 0; i < bricks.length; i++) {
                 ctx.fillStyle = bricks[i].color;
                 ctx.fillRect(bricks[i].x, bricks[i].y, bricks[i].w, bricks[i].h);
             }
+
             for (var i = 0; i < bonuses.length; i++) {
                 // reduce paddle
                 if (bonuses[i].type === 1) {
@@ -261,6 +263,7 @@ class CanvasComponent extends React.Component {
                     bonuses.splice(i, 1);
                 }
             }
+
             // paddle movement
             if ((keys.isPressed(65) || keys.isPressed(37)) &&
                 paddle1.x > 0) { // LEFT
@@ -269,11 +272,13 @@ class CanvasComponent extends React.Component {
                 (paddle1.x + paddle1.w) < Width) { // RIGHT
                 paddle1.x += paddle1.speed;
             }
+
             // start ball on space key
             if (keys.isPressed(32) && ballOn === false) {
                 ballOn = true;
                 gameOver = 0;
             }
+
             // ball movement
             if (ballOn === true) {
                 ball.x += ball.speedX;
@@ -313,17 +318,17 @@ class CanvasComponent extends React.Component {
             draw();
             requestAnimationFrame(loop);
         }
-
         requestAnimationFrame(loop);
-
     }
 
     render() {
         let gameWidth;
+        const gameHeight = 450;
+
         if (typeof window !== `undefined`) {
             gameWidth = window.innerWidth;
-          }
-        const gameHeight = 450;
+        }    
+
         return (
             <div id="canvasBack">
                 <canvas ref="canvas" width={gameWidth}
@@ -332,9 +337,5 @@ class CanvasComponent extends React.Component {
         )
     }
 }
-
-
-
-
 
 export default CanvasComponent;
