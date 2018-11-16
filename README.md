@@ -1,6 +1,6 @@
 This is my portfolio+blog page. I hope u enjoy the visit.
 
-https://portfolio-try-jve.netlify.com/
+https://themeadbaron.netlify.com/
 
 I used :
 
