@@ -6,7 +6,6 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
     "gatsby-remark-embed-video",
-    "gatsby-remark-responsive-iframe",
     {
       resolve: 'gatsby-source-filesystem',
       options: {
