@@ -6,13 +6,7 @@ description: >
   I think i'm gonna start a meadmaking post series, where i can explain to
   someone who wants to know, how i make my mead.
 tags:
-  - mead
   - meadmaking
-  - brew
-  - honey
-  - bees
-  - drink
-  - yeast
 ---
 ![flavor wheel](/img/mead.jpg)
 
