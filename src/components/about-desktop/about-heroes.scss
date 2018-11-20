@@ -1,0 +1,57 @@
+
+#contenedor{
+  margin-top:1%;
+  max-width: 50%;
+  #posts{
+    width:100%;
+    float:left;
+    .post{
+      border: 1px solid #ccc;
+      background-image: url('http://t01.deviantart.net/aFw2oeHvYkmXw6q-EkkbXjYUwdE=/300x200/filters:fixed_height(100,100):origin()/pre01/1c59/th/pre/f/2017/137/c/4/injustice_2_smoke_background_by_galacticattorney-db9kt49.jpg');
+      background-size: cover;
+      padding: 2px;
+    }
+  }
+}
+#pictureHero{
+    max-width: 100% !important;
+}
+#info-container{
+    // max-width: 65% !important;
+
+  #player-selected{
+    #player-picture{
+      position:relative;
+     
+    }
+    
+    #player-info{
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 3rem;
+      background: rgba(0,0,0,.5);
+      border: 2px solid #FFF;
+      color: white;
+      margin-top: 20px;
+      font-family: 'Coda', cursive;
+      h1{
+        padding-top: 0;
+        margin-top:0;
+        text-transform: uppercase;
+        font-weight: bold;
+        color: yellow;
+        font-family: 'Righteous', cursive;
+      }
+      
+      .entry{
+        
+      }
+    }
+  }
+}
+
+*{
+  box-sizing: border-box;
+}
